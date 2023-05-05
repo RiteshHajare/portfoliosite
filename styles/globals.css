@@ -1,27 +1,612 @@
+@import url('https://fonts.googleapis.com/css2?family=La+Belle+Aurore&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+  --parrot:#08fdd8;
+  --lightnavy:#112240;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+img {
+  -webkit-user-drag: none;
+  -moz-user-drag: none;
+  -ms-user-drag: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+body{
+  background: #1d1d1d;
+  user-select: none;
+  z-index: 30;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+}
+
+p,small,h1,h2,h3,span,div,section,main{
+  color: white;
+}
+p,h1,h2,h3{
+  cursor: text;
+}
+.sectiona,.portfolioinfo,.sectionc,.sectiond{
+  padding: 0 4rem;
+  transition: all 0.3s ease-out;
+}
+
+.firsth1::after{
+  content: '<h1>';
+  font-family: 'La Belle Aurore', cursive;
+  color: #515152;
+  font-size: 18px;
+  position: absolute;
+  left: -1rem;
+  top: -0.5rem;
+  letter-spacing: normal;
+}
+.firsth1::before{
+  content: '<body>';
+  font-family: 'La Belle Aurore', cursive;
+  color: #515152;
+  font-size: 18px;
+  position: absolute;
+  left: -1.3rem;
+  top: -2rem;
+  letter-spacing: normal;
+}
+.lasth1::after{
+  content: '</h1>';
+  font-family: 'La Belle Aurore', cursive;
+  color: #515152;
+  font-size: 18px;
+  position: absolute;
+  right: -4rem;
+  bottom: -0.5rem;
+  letter-spacing: normal;
+}
+.sectiona p{
+  color:#8d8d8d;
+  letter-spacing: 0.4rem;
+  position: relative;
+}
+.pseudop::before,.aboutbody > p:first-child::before{
+  content: '<p>';
+  font-family: 'La Belle Aurore', cursive;
+  color: #515152;
+  font-size: 18px;
+  position: absolute;
+  left: -1rem;
+  top: -1.5rem;
+}
+
+.pseudop::after,.aboutbody > p:last-child::after{
+  content: '<p/>';
+  font-family: 'La Belle Aurore', cursive;
+  color: #515152;
+  font-size: 18px;
+  position: absolute;
+  left: -1rem;
+  bottom: -1.8rem;
+}
+.contactbtn{
+  outline-width:  1.2px;
+  outline-style: solid;
+  outline-color: var(--parrot);
+  width: 13rem;
+  letter-spacing: 0.4rem;
+  color: var(--parrot);
+  height: 3.2rem;
+  font-size: small;
+  font-weight: 500;
+  position: relative;
+  transition: all 0.6s ease;
+  background: linear-gradient(98deg, var(--parrot) 50%, #1d1d1d 50%) right;
+  background-size: 250% 100%;
+  
+}
+
+.contactbtn::after{
+  content: " ";
+  position: absolute;
+  height: 5px;
+  width: 5px;
+  right: 0;
+  bottom: 0;
+  background-color: var(--parrot);
+}
+.contactbtn:hover:after{
+  background-color: white;
+}
+.blkcolor{
+  color: black !important;
+}
+
+.contactbtn:hover{
+  background-position: left;
+}
+.scrolldown{
+  rotate: 90deg;
+  left: -1rem;
+  bottom: 3rem;
+  animation-name: scrolleffect;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  transition: all 1s ease;
+}
+.scrolldown2{
+  rotate: 90deg;
+  right: -0.5rem;
+  bottom: 3rem;
+  animation-name: scrolleffect2;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  transition: all 1s ease;
+}
+
+.portfolioinfo h2,.leftabout h2,.sectiond h2,.contactleft h2{
+  font-size: 4rem;
+  font-weight: 700;
+  color: var(--parrot) !important;
+}
+
+.h2pseudo::after,.leftabout h2:after,.sectiond h2:after,.contactleft h2:after{
+  content: '<h2>';
+  font-family: 'La Belle Aurore', cursive;
+  color: #515152;
+  font-size: 18px;
+  position: absolute;
+  left: -1rem;
+  letter-spacing: normal;
+  top: -0.5rem;
+}
+.h2pseudo::before,.leftabout h2:before,.sectiond h2:before,.contactleft h2:before{
+  content: '</h2>';
+  font-family: 'La Belle Aurore', cursive;
+  color: #515152;
+  font-size: 18px;
+  position: absolute;
+  left: -1rem;
+  bottom: -1.5rem;
+  letter-spacing: normal;
+}
+
+
+.workbg{
+  position: absolute;
+  font-size: 26rem;
+  font-weight: 700;
+  display: block;
+  top: -9rem;
+  left: 37vw;
+  color: rgba(255,255,255,0.04);
+  letter-spacing: -2rem;
+}
+
+.projects::after,.certs::after{
+  content: '<section>';
+  font-family: 'La Belle Aurore', cursive;
+  color: #515152;
+  font-size: 18px;
+  position: absolute;
+  left:-3.5rem;
+  letter-spacing: normal;
+  top: -3rem;
+}
+.form:before{
+  content: '<form>';
+  font-family: 'La Belle Aurore', cursive;
+  color: #515152;
+  font-size: 18px;
+  position: absolute;
+  left:-1rem;
+  letter-spacing: normal;
+  top: -3rem;
+}
+.contactleft::before{
+  content: '</form>';
+  font-family: 'La Belle Aurore', cursive;
+  color: #515152;
+  font-size: 18px;
+  position: absolute;
+  left:-1rem;
+  letter-spacing: normal;
+  bottom: -1rem;
+}
+
+
+.contactleft::after{
+  content: '</body>';
+  font-family: 'La Belle Aurore', cursive;
+  color: #515152;
+  font-size: 18px;
+  position: absolute;
+  left:-2rem;
+  letter-spacing: normal;
+  bottom: -2.5rem;
+}
+.contactleft button::before{
+  content: '</html>';
+  font-family: 'La Belle Aurore', cursive;
+  color: #515152;
+  font-size: 18px;
+  position: absolute;
+  left:-174%;
+  letter-spacing: normal;
+  bottom: -4rem;
+}
+.projects::before,.certs::before{
+  content: '</section>';
+  font-family: 'La Belle Aurore', cursive;
+  color: #515152;
+  font-size: 18px;
+  position: absolute;
+  left: -3.5rem;
+  letter-spacing: normal;
+  bottom: -3rem;
+}
+.certs::after,.certs::before{
+  left: -5.5rem;
+}
+.certs::after{
+  top: -2.5rem;
+}
+
+.projectcard header p{
+  cursor: pointer !important;
+}
+
+.projectcard{
+  background-color: var(--lightnavy);
+  transition: all .3s ease-in-out;
+  box-shadow: 0 10px 30px -15px var(--navy-shadow);
+  opacity: 0.7 ;
+  border-radius: 5px;
+}
+
+
+.projectcard:hover{
+  opacity: 1;
+}
+
+.projectcard h3{
+  color: var(--parrot);
+}
+
+.projects{
+  padding: 0 auto;
+  grid-template-columns:  auto auto auto auto;
+  grid-template-rows: 16rem 16rem;
+  gap: 1rem;
+}
+
+.tagcloud--item{
+  color: var(--parrot);
+  font-size: 1.2rem;
+}
+
+.skills small{
+  color: #8892b0 !important;
+}
+
+.projectcard:hover{
+  transform: translateY(-10px);
+  cursor: pointer;
+}
+
+.certs{
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+}
+
+.certs img:hover,.sectiond1 img:hover {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transform: scale(1.05);
+}
+.certs img,.sectiond1 img {
+  transition: all 0.2s ease-in-out;
+}
+
+.sectiond1{
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+}
+
+.seemore{
+  float: right;
+  color: var(--parrot);
+  margin-top: 1.3rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.seemore:hover{
+  opacity: 0.5;
+}
+
+.inputbg{
+  background-color: #2b2b2b;
+  color: #8d8d8d;
+  padding: 0 20px;
+  transition: all 0.6s ease;
+}
+
+.inputbg:focus::placeholder,
+textarea:focus::placeholder {
+  color: transparent;
+}
+
+.inputbg:focus{
+  outline: none;
+}
+
+textarea::placeholder{
+  padding-top: 1rem;
+}
+textarea{
+  max-height: 690px;
+}
+
+iframe{
+  min-width: 10rem;
+}
+.inputpseudo{
+  overflow: hidden;
+}
+.inputpseudo:after{
+  content: " ";
+  position: absolute;
+  height: 1.5px;
+  background-color: var(--parrot);
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  transform: translateX(-105%);
+  overflow-x: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+ .inputpseudo:focus-within:after{
+  transform: translateX(0);
+} 
+
+@keyframes scrolleffect {
+  0%   {left:-1rem; bottom:3rem;}
+  50%  { left:-1rem; bottom:4rem;}
+  100% { left:-1rem; bottom:3rem;}
+}
+@keyframes scrolleffect2 {
+  0%   { right: -0.5rem; bottom: 3rem;}
+  50%  { right:-0.5rem; bottom:4rem;}
+  100% { right: -0.5rem; bottom: 3rem;}
+}
+
+
+
+@media(min-width:761px ) and (max-width:1000px ) {
+  .sectiona div div h1{
+    font-size: 5rem;
   }
+  .sectione{
+    display: block;
+  }
+  .contactleft{
+    margin-left: 0;
+    padding: 0 5rem;
+  }
+
+  .contactright{
+    margin-top: 4rem;
+  }
+  iframe{
+    margin: 0 auto;
+  }
+  .projects{
+    grid-template-columns:  auto auto ;
+    gap: 2rem;
+  }
+  .sectionc{
+    display: block;
+    margin-top: 4rem;
+  }
+
+  .projectcard{
+    width: 20rem;
+  }
+  .sectiona p{
+    letter-spacing: 0.2rem;
+    margin-top: 3rem;
+  }
+
+  .sectiona button{
+    margin-top: 3rem;
+  }
+  .portfolioinfo p{
+    width: 100%;
+  }
+  .sectionb{
+    overflow-x: clip;
+  }
+  .workbg{
+    font-size: 15rem;
+    top: 7rem;
+    left: 42vw;
+    letter-spacing: -0.9rem;
+  }
+  .projects::after{
+    left:-1rem;
+  }
+  .projects::before{
+    left: -1rem;
+  }
+  .rightabout{
+    margin-top: 1rem;
+  }
+  .tagcloud{
+    margin: 0 auto;
+  }
+  .leftabout h2:after{
+    top: 0rem;
+  }
+
+  .sectiond h2::after,.sectiond h2::before,.contactleft h2{
+    left:-3.6rem;
+  }
+  .sectiond h2::after,.contactleft h2{
+    top: 0rem;
+  }
+
+  .contactleft::after{
+    left:2rem;
+    bottom: -150%;
+  }
+  .contactright::after{
+    content: '</html>';
+    font-family: 'La Belle Aurore', cursive;
+    color: #515152;
+    font-size: 18px;
+    position: absolute;
+    left:1rem;
+    letter-spacing: normal;
+    bottom: -7rem;
+}
+  .contactleft button::before{
+    display: none;
+  }
+
+  .contactleft::before{
+    left:3rem;
+    bottom: -58rem;
+  }
+
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+@media(max-width:760px) {
+
+  .contactleft::after{
+    left:2rem;
+    bottom: -156%;
+  }
+  .contactright::after{
+    content: '</html>';
+    font-family: 'La Belle Aurore', cursive;
+    color: #515152;
+    font-size: 18px;
+    position: absolute;
+    left:1rem;
+    letter-spacing: normal;
+    bottom: -6.9rem;
+}
+  .contactleft button::before{
+    display: none;
+  }
+
+  .contactleft::before{
+    left:3rem;
+    bottom: -58rem;
+  }
+  
+  .sectione{
+    display: block;
+  }
+
+  .contactleft{
+    padding:0 1.6rem ;
+    margin: 0;
+    margin-bottom: 4rem;
+  }
+
+  iframe{
+    width: 100%;
+  }
+  .tagcloud{
+    margin: 0 auto;
+  }
+  
+  span{padding: 0 0.2rem;}
+  .sectiona,.portfolioinfo{
+    justify-content: center;
+    padding: 0 1.5rem;
+  }
+  .sectiond{
+    padding: 0 1.4rem;
+  }
+
+  .portfolioinfo p{
+    width: 100%;
+  }
+  .projects{
+    grid-template-columns:  auto ;
+    grid-template-rows: 16rem 16rem;
+    padding: 0 2rem;
+  }
+
+  .sectionc{
+    display: block;
+    padding: 0;
+    margin: 4rem 1rem 0;
+  }
+  .tagcloud{
+    font-size: 1rem;
+    cursor: context-menu !important;
+  }
+  .tagcloud span{
+    cursor: context-menu !important;
+  }
+
+  .projectcard{
+    width: 100%;
+  }
+  .workbg{
+    display: none;
+  }
+  .sectiona div div h1{
+    font-size: 3rem;
+    letter-spacing: -0.5rem;
+  }
+
+  .projects::after{
+    left:1rem;
+  }
+  .projects::before{
+    left: 1rem;
+  }
+
+  .portfolioinfo h2,.leftabout h2,.sectiond h2,.contactleft h2{
+    font-size: 2.9rem;
+    letter-spacing: -0.5rem;
+  }
+
+  .firsth1::before{
+    top: -6rem;
+  }
+
+  .firsth1::after{
+    top: -2rem;
+  }
+
+  .lasth1::after{
+    right: -1em;
+    bottom: -1.2rem;
+  }
+
+  .sectiona p{
+    letter-spacing: 0.2rem;
+  }
+
+  .sectiona button{
+    margin-top: 2rem;
+  }
+
+  .certs::after,.certs::before{
+    left:-1.2rem;
+  }
+  
+
 }
