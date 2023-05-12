@@ -32,7 +32,7 @@ function About() {
 
         const options = {
             radius: 300,
-            radiusMobile: 180,
+            radiusMobile: 140,
             radiusDesktop: 300,
             maxSpeed: "fast",
             initspeed: "normal",
