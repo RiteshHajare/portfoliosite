@@ -488,10 +488,20 @@ iframe{
 }
 
 @media(max-width:760px) {
+  .contactleft{
+    padding: 0 0.5rem !important;
+  }
+  .nameemail{
+    display: block;
+    gap: 1rem;
+  }
 
+  .nameemail>:last-child{
+    margin-top: 0.75rem;
+  }
   .contactleft::after{
-    left:2rem;
-    bottom: -156%;
+    left:2.3rem;
+    bottom: -141%;
   }
   .contactright::after{
     content: '</html>';
@@ -607,6 +617,20 @@ iframe{
   .certs::after,.certs::before{
     left:-1.2rem;
   }
-  
 
+  .tagcloud--item{
+    font-size: 1rem;
+  }
+  
+  .form{
+    margin: 0 0.3rem;
+  }
+
+  .form:before{
+    left:-0.3rem;
+  }
+
+  .contactleft h2{
+    margin: 0 1.6rem;
+  }
 }
