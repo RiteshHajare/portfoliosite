@@ -265,6 +265,16 @@ p,h1,h2,h3{
   cursor: pointer !important;
 }
 
+input,textarea{
+  border:none !important;
+  outline:none !important;
+}
+textarea:active{
+  border:none !important;
+  outline:none !important;
+  
+}
+
 .projectcard{
   background-color: var(--lightnavy);
   transition: all .3s ease-in-out;
@@ -484,6 +494,12 @@ iframe{
     left:3rem;
     bottom: -58rem;
   }
+  .contacttoast{
+    position: absolute;
+    top: 4% !important;
+    right: 0.5rem !important;
+    height: fit-content;
+  }
 
 }
 
@@ -632,5 +648,13 @@ iframe{
 
   .contactleft h2{
     margin: 0 1.6rem;
+  }
+
+  .contacttoast{
+    position: absolute;
+    top: 4% !important;
+    right: 0.5rem !important;
+    height: fit-content;
+    width: 57vw;
   }
 }
