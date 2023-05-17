@@ -279,6 +279,15 @@ textarea:active{
   
 }
 
+.aboutbody p a{
+  color: rgb(109, 109, 244);
+  font-size: 1.1rem;
+}
+
+.aboutbody p a:hover{
+  color: rgb(127, 127, 181);
+}
+
 .projectcard{
   background-color: var(--lightnavy);
   transition: all .3s ease-in-out;
@@ -360,11 +369,9 @@ textarea:focus::placeholder {
   outline: none;
 }
 
-textarea::placeholder{
-  padding-top: 1rem;
-}
 textarea{
   max-height: 690px;
+  padding-top: 1rem !important;
 }
 
 iframe{

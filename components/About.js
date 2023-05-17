@@ -75,6 +75,9 @@ function About() {
                 <p className="relative">I am an enthusiastic and driven undergraduate computer engineering student with a passion for full stack web development.</p>
                 <p className="relative">From a young age, I exhibited an inherent curiosity and interest in technology. Fascinated by the way websites and applications seamlessly interacted, they embarked on a journey to understand the intricacies of web development.</p>
                 <p className="relative">This passion led me to pursue a degree in computer engineering, where i learned technical skills and acquired a strong foundation in computer science.</p>
+                <p className="relative">Links &nbsp;&nbsp;- &nbsp;&nbsp;
+                <a target="_blank" href="https://www.linkedin.com/in/ritesh-hajare-515941242/">LinkedIn</a>
+                &nbsp;&nbsp;&nbsp;&nbsp; <a target="_blank" href="https://github.com/RiteshHajare">GitHub</a></p>
             </div>
         </div>
         <div className="rightabout">

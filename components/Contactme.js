@@ -31,7 +31,7 @@ function Contactme() {
                 validmail=false;
                 setIsHidden(false);
                 setTimeout(()=>{setIsHidden(true);}, 5000);
-                if(form.message==""){
+                if(form.message.trim().length==0){
                     setMessage("please, enter valid email and message.");
                         setIsHidden(false);
                         setTimeout(()=>{setIsHidden(true);}, 5000);
@@ -40,7 +40,7 @@ function Contactme() {
                 // elementRef.current.style.setProperty('--after-bg-color', 'red');
               
         }else validmail=true;
-        if(form.message==""){
+        if(form.message.trim().length==0){
             setMessage("please, enter your message.");
                 setIsHidden(false);
                 setTimeout(()=>{setIsHidden(true);}, 5000);
@@ -74,17 +74,17 @@ function Contactme() {
             <div className="form flex flex-col gap-3 relative">
                 <div className="nameemail flex gap-3">
                     <div className="inputpseudo w-full relative">
-                        <input value={form.name} onChange={handleChange} name="name" placeholder="Name" className="w-full inputbg h-12  relative" type="text" />
+                        <input onKeyDown={e=>{e.key === 'Enter' && handleClick()}} value={form.name} onChange={handleChange} name="name" placeholder="Name" className="w-full inputbg h-12  relative" type="text" />
                     </div>
                     <div ref={elementRef} className="inputpseudo w-full relative">
-                        <input  value={form.email} onChange={handleChange} name="email" placeholder="Email" className="w-full  inputbg h-12  relative" type="email" />
+                        <input onKeyDown={e=>{e.key === 'Enter' && handleClick()}}  value={form.email} onChange={handleChange} name="email" placeholder="Email" className="w-full  inputbg h-12  relative" type="email" />
                     </div>
                 </div>
                 <div className="inputpseudo w-full relative">
-                    <input value={form.subject} onChange={handleChange} name="subject" placeholder="Subject" className="w-full  inputbg h-12 " type="text" />
+                    <input onKeyDown={e=>{e.key === 'Enter' && handleClick()}} value={form.subject} onChange={handleChange} name="subject" placeholder="Subject" className="w-full  inputbg h-12 " type="text" />
                 </div>
                 <div className="inputpseudo w-full relative">
-                    <textarea value={form.message} onChange={handleChange} name="message" placeholder="Message" className="border-transparent focus:border-transparent focus:ring-0 w-full  inputbg " rows="10"></textarea>
+                    <textarea onKeyDown={e=>{e.key === 'Enter' && handleClick()}} value={form.message} onChange={handleChange} name="message" placeholder="Message" className="border-transparent focus:border-transparent focus:ring-0 w-full  inputbg " rows="10"></textarea>
                 </div>
             </div>
             <button 
