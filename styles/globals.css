@@ -234,6 +234,10 @@ p,h1,h2,h3{
   letter-spacing: normal;
   bottom: -2.5rem;
 }
+
+*{
+  scroll-behavior: smooth !important;
+  }
 .sectione::before{
   content: '</html>';
   font-family: 'La Belle Aurore', cursive;

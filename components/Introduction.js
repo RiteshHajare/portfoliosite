@@ -1,6 +1,8 @@
+import { useRouter } from "next/router";
 import Blast from "./Blast";
 
 function Introduction() {
+  const router = useRouter();
   const h1 = "Hi,".split("");
   const h2 = "I'm Ritesh,".split("");
   const h3 = "web developer".split("");
@@ -23,7 +25,8 @@ function Introduction() {
             })}</h1>
         </div>
         <p className="mt-8 pseudop">Full Stack Web Developer</p>
-        <button 
+        <button
+        onClick={()=>{router.push('#contactsect')}} 
         onMouseEnter={(e)=>{e.target.classList.add("blkcolor");}}
         onMouseLeave={(e)=>{e.target.classList.remove("blkcolor");}}
         className="contactbtn mt-6 flex justify-center items-center"

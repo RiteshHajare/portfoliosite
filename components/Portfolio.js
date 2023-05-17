@@ -38,7 +38,7 @@ function Portfolio() {
                 />
                 <ProjectCard
                     title={"LinkedIn-clone"}
-                    link={""}
+                    link={"https://github.com/RiteshHajare/LinkedIn-clone"}
                     body={"Full-stack Responsive LinkedIn clone with Server-side Rendering."}
                     skills={["Next.js","Tailwind","HTML","MongoDB"]}
                 />

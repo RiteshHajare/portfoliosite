@@ -72,9 +72,9 @@ function About() {
         <div className="leftabout flex flex-col gap-9">
             <h2 className="relative"><StyledH2 title={title} /></h2>
             <div className="aboutbody flex flex-col gap-3">
-                <p className="relative">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec viverra ligula. Aenean vestibulum porttitor magna, sit amet consectetur ligula.</p>
-                <p className="relative">Sed vulputate lorem rhoncus tellus rhoncus tristique. Duis finibus semper luctus. In posuere, est id maximus imperdiet, dolor magna bibendum est, sit amet ullamcorper risus libero sed magna. Donec placerat fringilla hendrerit. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
-                <p className="relative">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec viverra ligula. Aenean vestibulum porttitor magna, sit amet consectetur ligula.</p>
+                <p className="relative">I am an enthusiastic and driven undergraduate computer engineering student with a passion for full stack web development.</p>
+                <p className="relative">From a young age, I exhibited an inherent curiosity and interest in technology. Fascinated by the way websites and applications seamlessly interacted, they embarked on a journey to understand the intricacies of web development.</p>
+                <p className="relative">This passion led me to pursue a degree in computer engineering, where i learned technical skills and acquired a strong foundation in computer science.</p>
             </div>
         </div>
         <div className="rightabout">
